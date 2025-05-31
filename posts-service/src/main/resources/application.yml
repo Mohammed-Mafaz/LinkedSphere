@@ -1,0 +1,12 @@
+#debug: true
+
+kafka.topic:
+  post-created: post-created
+  post-liked: post-liked
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
